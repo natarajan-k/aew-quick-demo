@@ -1,4 +1,4 @@
-# Aspera Enterprise WebApps (AEW) - Quick Demo GUide
+# Aspera Enterprise WebApps (AEW) - Quick Demo Guide
 
 ## Introduction
 
@@ -12,7 +12,7 @@ IBM Aspera® Enterprise WebApps is a modern web application that combines high-s
 - Improves efficiency for teams handling large-scale data transfers
 
 ## Objective
-This guide provides a simple and quick demonstration of the core functionalities of AEW. It is intended to help users quickly understand and experience the key features and workflows of the software.
+This guide provides a simple and quick guide to demonstrate the core functionalities of AEW. It is intended to help users quickly understand and experience the key features of the software.
 
 For more detailed configuration, administration, and advanced usage information, please refer to the official Administration Guide and product documentation.
 
@@ -20,7 +20,7 @@ For more detailed configuration, administration, and advanced usage information,
 1. [AEW User GUide](https://www.ibm.com/docs/en/aspera-webapps?topic=user)
 2. [AEW Admin Guide](https://www.ibm.com/docs/en/aspera-webapps?topic=admin)
 3. [IBM Aspera for Desktop Client Guide](https://www.ibm.com/docs/en/aspera-for-desktop/1.0.x?topic=getting-started)
-4. [IBM Aspera Gided Demo](https://www.ibm.com/products/aspera/demo)
+4. [IBM Aspera Guided Demo](https://www.ibm.com/products/aspera/demo)
 
 ## Pre-requisites
 
@@ -29,6 +29,7 @@ For more detailed configuration, administration, and advanced usage information,
 3. You need to have the IBM Aspera for Desktop client application installed in your local computer to perform high speed FASP transfers. You can download and install the client from [here](https://ibmaspera.com/help/downloads/desktop).   
 
 ## Demo Guide
+This document covers the following demos. 
 1. [Navigating the portal](#navigating-the-portal)
 2. [Files App - Create Folder and Upload File](#b-files-app---create-folder-and-upload-file)
 3. [Files App - Creating Link and Sharing it](#c-files-app---creating-link-and-sharing-it)
@@ -130,9 +131,9 @@ You can enter multiple email addresses while sending a package. Apart from that,
     >Add file(s) / folder(s).  
 <p align="center"> <img src="images/14.jpg" alt="Description" width="700"></p> 
 
-    Note that you will not be able to enter a recipient email as the recipient is the one who sent the link to you. 
+    Note that you will not be able to enter a recipient email as the recipient is the Shared Inbox. 
 
-8. Add some files and click Send. Your package should be created and delivered to the sender of the submission link.   
+8. Add some files and click Send. Your package should be created and delivered to the Shared Inbox.   
 9. The sender of the submission link will be notified once the package has been stored in the Shared Inbox.   
 <p align="center"> <img src="images/16.jpg" alt="Description" width="700"></p>  
 10. Open your packages app and click on the Shared Inbox. You should see the package sent to you listed there.  
@@ -163,7 +164,7 @@ You can enter multiple email addresses while sending a package. Apart from that,
 *You can also monitor audit events - such user created, file downloaded etc. from the 'Application Events' menu*.   
 
 ### H) Automation App - Create a Simple Workflow.   
-We will create a workflow that will monitor your home folder. When a jpg file is uploaded to the home folder, the file will be sent as a package to an external recipient.    
+We will create a workflow that will monitor your home folder. When a jpg file is uploaded to the home folder, the file will be sent as a package to an external recipient. Then the source file will be deleted.     
 
 1. Login to AEW.  
 2. Click on the 'App Switcher and choose the Automation App.   
@@ -171,7 +172,7 @@ We will create a workflow that will monitor your home folder. When a jpg file is
 4. Click on the "New Trigger" and Click on "File add Event".   
 <p align="center"> <img src="images/21.jpg" alt="Description" width="700"></p>    
 
-5. In the next screen choose the workspace name. Pick on the folders where you can upload files to and click "Select".   
+5. In the next screen choose the workspace name. Pick on the folder where you can upload files to and click "Select".   
 <p align="center"> <img src="images/22.jpg" alt="Description" width="700"></p>    
 
 6. For the "Trigger When", click on 'Custom' and define a condition where the extension name contains 'jpg'.  Then click 'Save'.    
@@ -179,7 +180,7 @@ We will create a workflow that will monitor your home folder. When a jpg file is
 
 7. Click on the '+' next to Step 1 and Pick 'Send a Package'.  
 8. Set the following. 
-    >"Source of your Transfer" = "Same As Trigger".  
+    >"Source of your Transfer" = "Same As Trigger" [This sets the trigger folder as the source folder].  
     >"After Transfer" = "Delete Source Content".  
     >"To(under Send Package)" = Enter Email address of a recipient.   
     >"Title" = Enter a title.   
